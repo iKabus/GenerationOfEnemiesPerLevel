@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Pool;
@@ -5,11 +6,12 @@ using UnityEngine.Pool;
 public class Spawner : MonoBehaviour
 {
     [SerializeField] private Enemy _prefabEnemy;
-    [SerializeField] private int _spawnAmount = 20;
+    [SerializeField] private int _spawnAmount = 1;
     [SerializeField] private float _repeatRate = 2f;
     [SerializeField] private int _poolCapacity = 5;
     [SerializeField] private int _poolMaxSize = 5;
 
+    private Coroutine _coroutine;
     private ObjectPool<Enemy> _pool;
     private List<Vector3> _spawnCoordinate;
 
@@ -34,7 +36,15 @@ public class Spawner : MonoBehaviour
 
     private void Start()
     {
-        InvokeRepeating(nameof(Spawn), 0.0f, _repeatRate);
+        _coroutine = StartCoroutine(SpawnCooldown());
+    }
+
+    private void OnDestroy()
+    {
+        if (_coroutine != null)
+        {
+            StopCoroutine(_coroutine);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -45,14 +55,24 @@ public class Spawner : MonoBehaviour
         }
     }
 
+    private IEnumerator SpawnCooldown()
+    {
+        while (enabled)
+        {
+            Spawn();
+
+            yield return new WaitForSeconds(_repeatRate);
+        }
+    }
+
     private void Spawn()
     {
         for (int i = 0; i < _spawnAmount; i++)
         {
             var enemy = _pool.Get();
-            enemy.Init(RemoveToPool);
+            enemy.Init(Release);
             enemy.transform.position = GetPosition();
-            enemy.GetTarget(transform);
+            enemy.GetDirection(transform);
         }
     }
 
@@ -64,7 +84,7 @@ public class Spawner : MonoBehaviour
         return _spawnCoordinate[Random.Range(minCoordinateRate, maxCoordinateRate)];
     }
 
-    private void RemoveToPool(Enemy enemy)
+    private void Release(Enemy enemy)
     {
         _pool.Release(enemy);
     }

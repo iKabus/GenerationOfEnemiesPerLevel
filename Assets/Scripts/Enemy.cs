@@ -14,13 +14,8 @@ public class Enemy : MonoBehaviour
         _mover = GetComponent<Mover>();
     }
 
-    public void GetTarget(Transform target)
+    public void GetDirection(Transform direction)
     {
-        _mover.GetTarget(target);
-    }
-
-    private void RemoveToPool()
-    {
-        _contact(this);
+        _mover.GetTarget(direction);
     }
 }

@@ -4,16 +4,16 @@ public class Mover : MonoBehaviour
 {
     [SerializeField] private float _speed;
 
-    private Transform _target;
+    private Transform _direction;
     
-    void Update()
+    private void Update()
     {
-        transform.LookAt((_target.position - transform.position).normalized);
-        transform.position = Vector3.MoveTowards(transform.position, _target.position, _speed * Time.deltaTime);
+        transform.LookAt((_direction.position - transform.position).normalized);
+        transform.position = Vector3.MoveTowards(transform.position, _direction.position, _speed * Time.deltaTime);
     }
 
-    public void GetTarget(Transform target)
+    public void GetTarget(Transform direction)
     {
-        _target = target;
+        _direction = direction;
     }
 }

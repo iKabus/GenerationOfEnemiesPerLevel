@@ -140,7 +140,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _prefabEnemy: {fileID: 5484356444756577540, guid: e331563c32d27af408030eda178b5312, type: 3}
-  _spawnAmount: 2
+  _spawnAmount: 1
   _repeatRate: 2
   _poolCapacity: 5
   _poolMaxSize: 5
@@ -386,7 +386,6 @@ GameObject:
   - component: {fileID: 1271899433}
   - component: {fileID: 1271899432}
   - component: {fileID: 1271899431}
-  - component: {fileID: 1271899430}
   - component: {fileID: 1271899435}
   m_Layer: 0
   m_Name: Level
@@ -395,18 +394,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1271899430
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1271899429}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9178adbb3f06c741a233052758af77a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!64 &1271899431
 MeshCollider:
   m_ObjectHideFlags: 0

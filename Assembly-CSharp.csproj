@@ -63,7 +63,6 @@
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\Mover.cs" />
     <Compile Include="Assets\Scripts\Spawner.cs" />
-    <Compile Include="Assets\Scripts\Level.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
