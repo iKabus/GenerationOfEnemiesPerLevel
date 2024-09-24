@@ -6,7 +6,6 @@ using UnityEngine.Pool;
 public class Spawner : MonoBehaviour
 {
     [SerializeField] private Enemy _prefabEnemy;
-    [SerializeField] private int _spawnAmount = 1;
     [SerializeField] private float _repeatRate = 2f;
     [SerializeField] private int _poolCapacity = 5;
     [SerializeField] private int _poolMaxSize = 5;
@@ -38,20 +37,12 @@ public class Spawner : MonoBehaviour
     {
         _coroutine = StartCoroutine(SpawnCooldown());
     }
-
+    
     private void OnDestroy()
     {
         if (_coroutine != null)
         {
             StopCoroutine(_coroutine);
-        }
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.TryGetComponent(out Enemy enemy))
-        {
-            _pool.Release(enemy);
         }
     }
 
@@ -67,13 +58,9 @@ public class Spawner : MonoBehaviour
 
     private void Spawn()
     {
-        for (int i = 0; i < _spawnAmount; i++)
-        {
-            var enemy = _pool.Get();
-            enemy.Init(Release);
-            enemy.transform.position = GetPosition();
-            enemy.GetDirection(transform);
-        }
+        Enemy enemy = _pool.Get();
+        enemy.Init(transform, GetPosition());
+        enemy.OnTriggerEntered += Release;
     }
 
     private Vector3 GetPosition()
@@ -86,6 +73,7 @@ public class Spawner : MonoBehaviour
 
     private void Release(Enemy enemy)
     {
+        enemy.OnTriggerEntered -= Release;
         _pool.Release(enemy);
     }
 }

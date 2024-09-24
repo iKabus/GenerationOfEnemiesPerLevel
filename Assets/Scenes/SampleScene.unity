@@ -140,7 +140,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _prefabEnemy: {fileID: 5484356444756577540, guid: e331563c32d27af408030eda178b5312, type: 3}
-  _spawnAmount: 1
   _repeatRate: 2
   _poolCapacity: 5
   _poolMaxSize: 5

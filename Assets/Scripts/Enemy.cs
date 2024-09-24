@@ -6,16 +6,21 @@ public class Enemy : MonoBehaviour
 {
     private Mover _mover;
 
-    private Action<Enemy> _contact;
+    public event Action<Enemy> OnTriggerEntered;
 
-    public void Init(Action<Enemy> contact)
+    public void Init(Transform direction, Vector3 position)
     {
-        _contact = contact;
+        transform.position = position;
         _mover = GetComponent<Mover>();
+        _mover.GetDirection(direction);
     }
 
-    public void GetDirection(Transform direction)
+    private void OnTriggerEnter(Collider other)
     {
-        _mover.GetTarget(direction);
+        if (other.gameObject.TryGetComponent(out Spawner spawner))
+        {
+            OnTriggerEntered?.Invoke(this);
+        }
     }
 }
+
