@@ -37,14 +37,6 @@ public class Spawner : MonoBehaviour
     {
         _coroutine = StartCoroutine(SpawnCooldown());
     }
-    
-    private void OnDestroy()
-    {
-        if (_coroutine != null)
-        {
-            StopCoroutine(_coroutine);
-        }
-    }
 
     private IEnumerator SpawnCooldown()
     {
@@ -56,6 +48,14 @@ public class Spawner : MonoBehaviour
         }
     }
 
+    private void OnDestroy()
+    {
+        if (_coroutine != null)
+        {
+            StopCoroutine(_coroutine);
+        }
+    }
+     
     private void Spawn()
     {
         Enemy enemy = _pool.Get();

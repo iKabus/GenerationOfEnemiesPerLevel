@@ -17,7 +17,7 @@ public class Enemy : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.TryGetComponent(out Spawner spawner))
+        if (other.TryGetComponent<Finish>(out _))
         {
             OnTriggerEntered?.Invoke(this);
         }

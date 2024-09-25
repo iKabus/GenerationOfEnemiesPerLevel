@@ -353,6 +353,7 @@
 -analyzer:"E:/Unity/2022.3.38f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"E:/Unity/2022.3.38f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/Scripts/Enemy.cs"
+"Assets/Scripts/Finish.cs"
 "Assets/Scripts/Mover.cs"
 "Assets/Scripts/Spawner.cs"
 -langversion:9.0
