@@ -13,10 +13,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{45C518E4-3A3E-B8B2-E5E8-006F2D286B87}|Assembly-CSharp.csproj|C:\\Users\\nikol\\OneDrive\\Desktop\\Projects\\GenerationOfEnemiesPerLevel\\assets\\scripts\\mover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{45C518E4-3A3E-B8B2-E5E8-006F2D286B87}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\mover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{45C518E4-3A3E-B8B2-E5E8-006F2D286B87}|Assembly-CSharp.csproj|c:\\users\\nikol\\onedrive\\desktop\\projects\\generationofenemiesperlevel\\assets\\scripts\\finish.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{45C518E4-3A3E-B8B2-E5E8-006F2D286B87}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\finish.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,21 +22,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Finish.cs",
-              "DocumentMoniker": "C:\\Users\\nikol\\OneDrive\\Desktop\\Projects\\GenerationOfEnemiesPerLevel\\Assets\\Scripts\\Finish.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Finish.cs",
-              "ToolTip": "C:\\Users\\nikol\\OneDrive\\Desktop\\Projects\\GenerationOfEnemiesPerLevel\\Assets\\Scripts\\Finish.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Finish.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-25T14:26:03.236Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 2,
@@ -49,7 +32,7 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\Mover.cs",
               "ToolTip": "C:\\Users\\nikol\\OneDrive\\Desktop\\Projects\\GenerationOfEnemiesPerLevel\\Assets\\Scripts\\Mover.cs",
               "RelativeToolTip": "Assets\\Scripts\\Mover.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-22T11:25:54.513Z",
               "EditorCaption": ""
@@ -62,7 +45,7 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\Spawner.cs",
               "ToolTip": "C:\\Users\\nikol\\OneDrive\\Desktop\\Projects\\GenerationOfEnemiesPerLevel\\Assets\\Scripts\\Spawner.cs",
               "RelativeToolTip": "Assets\\Scripts\\Spawner.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAQwDQAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAACwAAAAAAAAAAAAwwDYAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-19T17:05:35.811Z",
               "EditorCaption": ""
@@ -75,7 +58,7 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy.cs",
               "ToolTip": "C:\\Users\\nikol\\OneDrive\\Desktop\\Projects\\GenerationOfEnemiesPerLevel\\Assets\\Scripts\\Enemy.cs",
               "RelativeToolTip": "Assets\\Scripts\\Enemy.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-19T16:54:27.401Z",
               "EditorCaption": ""

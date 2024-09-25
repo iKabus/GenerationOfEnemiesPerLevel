@@ -42,11 +42,13 @@ public class Spawner : MonoBehaviour
 
     private IEnumerator SpawnCooldown()
     {
+        var wait = new WaitForSeconds(_repeatRate);
+
         while (enabled)
         {
             Spawn();
 
-            yield return new WaitForSeconds(_repeatRate);
+            yield return wait;
         }
     }
 
@@ -63,7 +65,6 @@ public class Spawner : MonoBehaviour
         Vector3 spawnPosition = GetPosition();
         Enemy enemy = _pool.Get();
         enemy.Init(spawnPosition, _finish.transform.position);
-        Debug.Log(GetDirection(spawnPosition));
         enemy.OnTriggerEntered += Release;
     }
 
